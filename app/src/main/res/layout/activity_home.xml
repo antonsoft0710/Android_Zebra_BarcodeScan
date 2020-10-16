@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:easytabs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayBg"
+    android:orientation="vertical"
+    android:padding="@dimen/_13sdp">
+
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/abReadOrWrite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:text="@string/read"
+        android:textColor="@android:color/white"
+        app:pb_colorNormal="@color/color_primary_dark"
+        app:pb_colorPressed="@color/colorPrimary"
+        app:pb_cornerRadius="@dimen/_5sdp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_weight="4.5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/rackId"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etRackId"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text"
+                android:paddingStart="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/_12sdp"
+                tools:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/job"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etJob"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text"
+                android:paddingStart="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/_12sdp"
+                tools:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/printMethodNumber"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etPrintMethodNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text"
+                android:paddingStart="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textSize="@dimen/_12sdp"
+                tools:text="" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="@dimen/_4sdp"
+        android:text="@string/reasonForFailureHere"
+        android:textAllCaps="true"
+        android:textColor="@color/red"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/abSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:text="@string/saveToBolt"
+                android:textColor="@android:color/white"
+                android:visibility="gone"
+                app:pb_colorError="@color/red"
+                app:pb_colorNormal="@color/color_primary_dark"
+                app:pb_colorPressed="@color/colorPrimary"
+                app:pb_cornerRadius="@dimen/_5sdp" />
+
+
+            <com.dd.processbutton.iml.ActionProcessButton
+                android:id="@+id/abValidiate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:text="@string/validate"
+                android:textColor="@android:color/white"
+                android:visibility="visible"
+                app:pb_colorError="@color/red"
+                app:pb_colorNormal="@android:color/holo_green_light"
+                app:pb_colorPressed="@android:color/holo_green_light"
+                app:pb_cornerRadius="@dimen/_5sdp"
+                app:pb_textError="@string/errormessage" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <com.dd.processbutton.FlatButton
+                android:id="@+id/fbClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:text="@string/clear"
+                android:textColor="@android:color/white"
+                app:pb_colorNormal="@color/color_primary_dark"
+                app:pb_colorPressed="@color/colorPrimary"
+                app:pb_cornerRadius="@dimen/_5sdp" />
+
+
+            <com.dd.processbutton.FlatButton
+                android:id="@+id/fbConfig"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:text="@string/config"
+                android:textColor="@android:color/white"
+                app:pb_colorNormal="@color/color_primary_dark"
+                app:pb_colorPressed="@color/colorPrimary"
+                app:pb_cornerRadius="@dimen/_5sdp" />
+
+
+            <com.dd.processbutton.FlatButton
+                android:id="@+id/fbExit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:layout_weight="1"
+                android:text="@string/exit"
+                android:textColor="@android:color/white"
+                app:pb_colorNormal="@color/color_primary_dark"
+                app:pb_colorPressed="@color/colorPrimary"
+                app:pb_cornerRadius="@dimen/_5sdp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
